@@ -1,0 +1,236 @@
+body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffd6e8, #fff0f5);
+      font-family: 'Dancing Script', cursive;
+      color: #d8006f;
+      overflow-x: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 60px;
+      font-size: 48px;
+      animation: fadeInDown 2s ease-in-out;
+    }
+
+    p, h2 {
+      font-size: 24px;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.6;
+      animation: fadeInUp 2s ease-in-out;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s infinite ease-in;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1000px) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 18px;
+      color: #a94464;
+    }
+.memory-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 50px auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.memory {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(216, 0, 111, 0.1);
+  animation: fadeInUp 2s ease-in-out;
+}
+
+.memory img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.memory p {
+  font-size: 20px;
+  color: #6c0e3a;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+/* Reverse the flex direction for right-aligned image blocks */
+.memory.right {
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, .memory p {
+    font-size: 18px;
+    padding: 0 15px;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+  .memory {
+    flex-direction: column !important;
+    text-align: left; /* align text left */
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .memory p {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .memory img {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+}
+
+  .memory.right {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
+.love-button {
+  background: #ff69b4;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-family: 'Dancing Script', cursive;
+  margin-top: 40px;
+}
+
+.love-button:hover {
+  background: #ff1493;
+  transform: scale(1.05);
+}
+
+.secret-message {
+  font-size: 24px;
+  color: #a80050;
+  margin-top: 30px;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p, .memory p {
+    font-size: 18px;
+    padding: 0 15px;
+    line-height: 1.6;
+  }
+
+  .memory {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .memory img {
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .memory p {
+    max-width: 100%;
+  }
+
+  .memory.right {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
