@@ -1,82 +1,87 @@
+/* GLOBAL STYLES */
 body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #ffd6e8, #fff0f5);
-      font-family: 'Dancing Script', cursive;
-      color: #d8006f;
-      overflow-x: hidden;
-      text-align: center;
-    }
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffd6e8, #fff0f5);
+  font-family: 'Dancing Script', cursive;
+  color: #d8006f;
+  overflow-x: hidden;
+  text-align: center;
+}
 
-    h1 {
-      margin-top: 60px;
-      font-size: 48px;
-      animation: fadeInDown 2s ease-in-out;
-    }
+h1 {
+  margin-top: 60px;
+  font-size: 48px;
+  animation: fadeInDown 2s ease-in-out;
+}
 
-    p, h2 {
-      font-size: 24px;
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.6;
-      animation: fadeInUp 2s ease-in-out;
-    }
+p, h2 {
+  font-size: 24px;
+  max-width: 700px;
+  margin: 20px auto;
+  line-height: 1.6;
+  animation: fadeInUp 2s ease-in-out;
+}
 
-    .heart {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
-      transform: rotate(45deg);
-      animation: float 10s infinite ease-in;
-    }
+/* HEART ANIMATION */
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float 10s infinite ease-in;
+}
 
-    .heart::before,
-    .heart::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
-      border-radius: 50%;
-    }
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
 
-    .heart::before {
-      top: -10px;
-      left: 0;
-    }
+.heart::before {
+  top: -10px;
+  left: 0;
+}
 
-    .heart::after {
-      left: -10px;
-      top: 0;
-    }
+.heart::after {
+  left: -10px;
+  top: 0;
+}
 
-    @keyframes float {
-      0% {
-        transform: translateY(0) rotate(45deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-1000px) rotate(45deg);
-        opacity: 0;
-      }
-    }
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(45deg);
+    opacity: 0;
+  }
+}
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    .footer {
-      margin-top: 50px;
-      font-size: 18px;
-      color: #a94464;
-    }
+/* FOOTER */
+.footer {
+  margin-top: 50px;
+  font-size: 18px;
+  color: #a94464;
+}
+
+/* MEMORY CONTAINER */
 .memory-container {
   display: flex;
   flex-direction: column;
@@ -111,60 +116,13 @@ body {
   max-width: 400px;
 }
 
-/* Reverse the flex direction for right-aligned image blocks */
+/* Align right blocks */
 .memory.right {
   flex-direction: row-reverse;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 32px;
-    margin-top: 40px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  p, .memory p {
-    font-size: 18px;
-    padding: 0 15px;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 768px) {
-  .memory {
-    flex-direction: column !important;
-    text-align: left; /* align text left */
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .memory p {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-
-  .memory img {
-    width: 100%;
-    max-width: 90vw;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 12px;
-  }
-}
-
-  .memory.right {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .footer {
-    font-size: 16px;
-    padding-bottom: 30px;
-  }
-}
+/* LOVE BUTTON */
 .love-button {
   background: #ff69b4;
   border: none;
@@ -184,12 +142,29 @@ body {
   transform: scale(1.05);
 }
 
+/* SURPRISE MESSAGE */
 .secret-message {
   font-size: 24px;
   color: #a80050;
   margin-top: 30px;
   animation: fadeInUp 1.2s ease-in-out;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
 }
+
+#confetti-canvas {
+  width: 100vw;
+  max-width: 100%;
+  height: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------- */
+/* ✅ RESPONSIVE STYLES FOR PHONES AND SMALL SCREENS */
+/* --------------------------------------------- */
 @media (max-width: 768px) {
   h1 {
     font-size: 32px;
@@ -197,13 +172,14 @@ body {
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   p, .memory p {
     font-size: 18px;
     padding: 0 15px;
     line-height: 1.6;
+    max-width: 100%;
   }
 
   .memory {
@@ -218,15 +194,17 @@ body {
     max-width: 90vw;
     height: auto;
     margin: 0 auto;
-  }
-
-  .memory p {
-    max-width: 100%;
+    border-radius: 12px;
   }
 
   .memory.right {
     flex-direction: column !important;
-    text-align: center;
+  }
+
+  .love-button {
+    width: 90%;
+    font-size: 20px;
+    padding: 12px 20px;
   }
 
   .footer {
