@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(to bottom, #ffd6e8, #fff0f5);
-  font-family: 'Dancing Script', cursive;
+  font-family: "Oswald", sans-serif;
+  word-spacing: 4px;
   color: #d8006f;
   overflow-x: hidden;
   text-align: center;
@@ -133,7 +134,8 @@ p, h2 {
   cursor: pointer;
   box-shadow: 0 6px 12px rgba(255, 105, 180, 0.4);
   transition: background 0.3s ease, transform 0.2s ease;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Oswald", sans-serif;
+  word-spacing: 2px;
   margin-top: 40px;
 }
 
@@ -167,16 +169,22 @@ p, h2 {
 /* --------------------------------------------- */
 @media (max-width: 768px) {
   h1 {
+    font-family: "Oswald", sans-serif;
     font-size: 32px;
+    word-spacing: 2px;
     margin-top: 40px;
   }
 
   h2 {
+    font-family: "Oswald", sans-serif;
     font-size: 20px;
+    word-spacing: 2px;
   }
 
   p, .memory p {
+    font-family: "Oswald", sans-serif;
     font-size: 18px;
+    word-spacing: 2px;
     padding: 0 15px;
     line-height: 1.6;
     max-width: 100%;
@@ -203,9 +211,17 @@ p, h2 {
 
   .love-button {
     width: 90%;
+    font-family: "Oswald", sans-serif;
     font-size: 20px;
+    word-spacing: 2px;
     padding: 12px 20px;
   }
+
+  .footer {
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
 
   .footer {
     font-size: 16px;
